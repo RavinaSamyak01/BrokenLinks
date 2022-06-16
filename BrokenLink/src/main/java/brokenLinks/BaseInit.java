@@ -152,7 +152,7 @@ public class BaseInit {
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		// after execution, you could see a folder "FailedTestsScreenshots" under src
 		// folder
-		String destination = System.getProperty("user.dir") + "/Report/RTE_Screenshot/" + screenshotName + ".png";
+		String destination = System.getProperty("user.dir") + "/Report/Screnshots/" + screenshotName + ".png";
 		File finalDestination = new File(destination);
 		FileUtils.copyFile(source, finalDestination);
 		return destination;
@@ -256,139 +256,6 @@ public class BaseInit {
 		}
 	}
 
-	public void login() throws InterruptedException, IOException {
-		WebDriverWait wait = new WebDriverWait(driver, 50);
-
-		String Env = storage.getProperty("Env");
-
-		if (Env.equalsIgnoreCase("Pre-Prod")) {
-			String baseUrl = storage.getProperty("PREPRODURL");
-			driver.get(baseUrl);
-			Thread.sleep(2000);
-			try {
-				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
-				String UserName = storage.getProperty("PREPRODUserName");
-				highLight(isElementPresent("UserName_id"), driver);
-				isElementPresent("UserName_id").sendKeys(UserName);
-				logs.info("Entered UserName");
-				String Password = storage.getProperty("PREPRODPassword");
-				highLight(isElementPresent("Password_id"), driver);
-				isElementPresent("Password_id").sendKeys(Password);
-				logs.info("Entered Password");
-
-			} catch (Exception e) {
-				msg.append("URL is not working==FAIL");
-				getScreenshot(driver, "LoginIssue");
-				driver.quit();
-				Env = storage.getProperty("Env");
-				String File = ".\\Report\\RTE_Screenshot\\LoginIssue.png";
-				Env = storage.getProperty("Env");
-				String subject = "Selenium Automation Script:" + Env + " RTE Smoke";
-
-				try {
-//					/kunjan.modi@samyak.com, pgandhi@samyak.com,parth.doshi@samyak.com
-					/*
-					 * SendEmail.
-					 * sendMail("ravina.prajapati@samyak.com, asharma@samyak.com, parth.doshi@samyak.com"
-					 * , subject, msg.toString(), File);
-					 */
-
-					SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
-
-				} catch (Exception ex) {
-					logs.error(ex);
-				}
-
-			}
-
-		} else if (Env.equalsIgnoreCase("STG")) {
-			String baseUrl = storage.getProperty("STGURL");
-			driver.get(baseUrl);
-			Thread.sleep(2000);
-			try {
-				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
-				String UserName = storage.getProperty("STGUserName");
-				highLight(isElementPresent("UserName_id"), driver);
-				isElementPresent("UserName_id").sendKeys(UserName);
-				logs.info("Entered UserName");
-				String Password = storage.getProperty("STGPassword");
-				highLight(isElementPresent("Password_id"), driver);
-				isElementPresent("Password_id").sendKeys(Password);
-				logs.info("Entered Password");
-			} catch (Exception e) {
-				msg.append("URL is not working==FAIL");
-				getScreenshot(driver, "LoginIssue");
-				driver.quit();
-				Env = storage.getProperty("Env");
-				String File = ".\\Report\\RTE_Screenshot\\LoginIssue.png";
-				Env = storage.getProperty("Env");
-				String subject = "Selenium Automation Script:" + Env + " RTE Smoke";
-
-				try {
-//					/kunjan.modi@samyak.com, pgandhi@samyak.com,parth.doshi@samyak.com
-					/*
-					 * SendEmail.
-					 * sendMail("ravina.prajapati@samyak.com, asharma@samyak.com, parth.doshi@samyak.com"
-					 * , subject, msg.toString(), File);
-					 */
-
-					SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
-
-				} catch (Exception ex) {
-					logs.error(ex);
-				}
-
-			}
-
-		} else if (Env.equalsIgnoreCase("DEV")) {
-			String baseUrl = storage.getProperty("DEVURL");
-			driver.get(baseUrl);
-			Thread.sleep(2000);
-			try {
-				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
-				String UserName = storage.getProperty("DEVUserName");
-				highLight(isElementPresent("UserName_id"), driver);
-				isElementPresent("UserName_id").sendKeys(UserName);
-				logs.info("Entered UserName");
-				String Password = storage.getProperty("DEVPassword");
-				highLight(isElementPresent("Password_id"), driver);
-				isElementPresent("Password_id").sendKeys(Password);
-				logs.info("Entered Password");
-			} catch (Exception e) {
-				msg.append("URL is not working==FAIL");
-				getScreenshot(driver, "LoginIssue");
-				driver.quit();
-				Env = storage.getProperty("Env");
-				String File = ".\\Report\\RTE_Screenshot\\LoginIssue.png";
-				Env = storage.getProperty("Env");
-				String subject = "Selenium Automation Script:" + Env + " RTE Smoke";
-
-				try {
-//					/kunjan.modi@samyak.com, pgandhi@samyak.com,parth.doshi@samyak.com
-					/*
-					 * SendEmail.
-					 * sendMail("ravina.prajapati@samyak.com, asharma@samyak.com, parth.doshi@samyak.com"
-					 * , subject, msg.toString(), File);
-					 */
-
-					SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
-
-				} catch (Exception ex) {
-					logs.error(ex);
-				}
-
-			}
-		}
-		highLight(isElementPresent("Login_id"), driver);
-		isElementPresent("Login_id").click();
-		logs.info("Login done");
-		wait.until(
-				ExpectedConditions.invisibilityOfElementLocated(By.xpath("//span[contains(text(),'Logging In...')]")));
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loaderDiv")));
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
-
-	}
-
 	public void logOut() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 		Actions act = new Actions(driver);
@@ -407,6 +274,7 @@ public class BaseInit {
 
 	}
 
+	@AfterSuite
 	public void Complete() throws Exception {
 		driver.close();
 		driver.quit();
@@ -533,9 +401,7 @@ public class BaseInit {
 
 	}
 
-	@AfterSuite
 	public void SendEmail() throws Exception {
-		logOut();
 		report.flush();
 		// --Close browser
 		Complete();
@@ -549,7 +415,7 @@ public class BaseInit {
 
 		String Env = storage.getProperty("Env");
 		String subject = "Selenium Automation Script: " + Env + "Broken Links";
-		String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\RTESmoke.html";
+		String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
 
 		try {
 			SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);

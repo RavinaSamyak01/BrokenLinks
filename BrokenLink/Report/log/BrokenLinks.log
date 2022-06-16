@@ -1,0 +1,9 @@
+2022-06-16 22:02:46,729 - BrokenLinks -INFO - initialization of the properties file is done
+2022-06-16 22:02:47,187 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
+2022-06-16 22:02:47,214 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
+2022-06-16 22:02:50,611 - BrokenLinks -INFO - Total URL exist in sheet==10
+2022-06-16 22:02:50,613 - BrokenLinks -INFO - ===============Broken Links Test Start===============
+2022-06-16 22:03:21,812 - BrokenLinks -INFO - Server Name==FedEX 
+2022-06-16 22:03:21,877 - BrokenLinks -INFO - URL is==https://staging.fedexsameday.com
+2022-06-16 22:03:21,878 - BrokenLinks -INFO - =====Broken Links Test Without Login=====
+2022-06-16 22:03:39,595 - BrokenLinks -INFO - Total links are 72
