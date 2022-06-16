@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RTE Job Smoke">
+
+	<!--<test thread-count="5" name="RTE Get PickUPID and Search">
+		<classes>
+			<class name="rte_RTEJobCreation.RTEGetPUpID"></class>
+		</classes>
+	</test>
+	-->
+
+
+	<test thread-count="5" name="RTE OneToOne Job Processing">
+		<classes>
+			<class name="rte_RTEJobCreation.RTEOneToOneOrderProcess"></class>
+		</classes>
+	</test>
+
+	<test thread-count="5" name="RTE OneToMany Job Processing">
+		<classes>
+			<class name="rte_RTEJobCreation.RTEOneToManyOrderProcess"></class>
+		</classes>
+	</test>
+
+	<test thread-count="5" name="RTE ManyToOne Job Processing">
+		<classes>
+			<class name="rte_RTEJobCreation.RTEManyToOneOrderProcess"></class>
+		</classes>
+	</test>
+
+	<test thread-count="5" name="RTE ManyToMany Job Processing">
+		<classes>
+			<class name="rte_RTEJobCreation.RTEManyToManyOrderProcess"></class>
+		</classes>
+	</test>
+
+	<test thread-count="5" name="RTE Reject/Resend/PendingDel Job Processing">
+		<classes>
+			<class name="rte_RTEJobCreation.RTEFlowWithRejectResend"></class>
+		</classes>
+	</test>
+
+
+	<test thread-count="5" name="RTE Crud Operation">
+		<classes>
+			<class name="rte_RTEJobCreation.RTECrudOperations"></class>
+		</classes>
+	</test>
+
+
+</suite> 
