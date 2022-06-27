@@ -117,6 +117,7 @@ public class BrokenLinks extends BaseInit {
 								.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class=\"welcomecontent\"]")));
 
 					}
+					Thread.sleep(10000);
 
 					links = driver.findElements(By.tagName("a"));
 
@@ -205,6 +206,7 @@ public class BrokenLinks extends BaseInit {
 								.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class=\"welcomecontent\"]")));
 
 					}
+					Thread.sleep(10000);
 
 					links = driver.findElements(By.tagName("a"));
 
@@ -312,6 +314,8 @@ public class BrokenLinks extends BaseInit {
 								.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class=\"welcomecontent\"]")));
 
 					}
+										Thread.sleep(10000);
+
 					links = driver.findElements(By.tagName("a"));
 
 					System.out.println("Total links are " + links.size());
