@@ -314,6 +314,8 @@ public class BaseInit {
 			FilePath = storage.getProperty("STGFile");
 		} else if (Env.equalsIgnoreCase("DEV")) {
 			FilePath = storage.getProperty("DEVFile");
+		} else if (Env.equalsIgnoreCase("Prod")) {
+			FilePath = storage.getProperty("PRODFile");
 		}
 
 		File src = new File(FilePath);
@@ -338,6 +340,8 @@ public class BaseInit {
 			FilePath = storage.getProperty("STGFile");
 		} else if (Env.equalsIgnoreCase("DEV")) {
 			FilePath = storage.getProperty("DEVFile");
+		} else if (Env.equalsIgnoreCase("Prod")) {
+			FilePath = storage.getProperty("PRODFile");
 		}
 
 		File src = new File(FilePath);
@@ -362,6 +366,8 @@ public class BaseInit {
 			FilePath = storage.getProperty("STGFile");
 		} else if (Env.equalsIgnoreCase("DEV")) {
 			FilePath = storage.getProperty("DEVFile");
+		} else if (Env.equalsIgnoreCase("Prod")) {
+			FilePath = storage.getProperty("PRODFile");
 		}
 
 		File src = new File(FilePath);
@@ -386,6 +392,8 @@ public class BaseInit {
 			FilePath = storage.getProperty("STGFile");
 		} else if (Env.equalsIgnoreCase("DEV")) {
 			FilePath = storage.getProperty("DEVFile");
+		} else if (Env.equalsIgnoreCase("Prod")) {
+			FilePath = storage.getProperty("PRODFile");
 		}
 
 		File src = new File(FilePath);
