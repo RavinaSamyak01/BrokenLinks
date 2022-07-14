@@ -26,7 +26,7 @@ public class BrokenLinks extends BaseInit {
 		int totalrows = getTotalRow("URL");
 		logs.info("Total URL exist in sheet==" + totalrows);
 
-		for (int row = 6; row < totalrows; row++) {
+		for (int row = 1; row < totalrows; row++) {
 			StringBuilder msg = new StringBuilder();
 			logs.info("===============Broken Links Test Start===============");
 			msg.append("===============Broken Links Test Start===============" + "\n\n");
@@ -157,6 +157,19 @@ public class BrokenLinks extends BaseInit {
 						}
 
 					}
+					msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
+
+					Env = storage.getProperty("Env");
+					String subject = "Selenium Automation Script: " + Env + " " + ServerName + " Broken Links";
+					String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
+
+					try {
+						SendEmail.sendMail("ravina.prajapati@samyak.com,parth.doshi@samyak.com,asharma@samyak.com",
+								subject, msg.toString(), File);
+
+					} catch (Exception ex) {
+						logs.error(ex);
+					}
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
 					msg1.append("Issue with URL==FAIL" + "\n");
@@ -244,6 +257,19 @@ public class BrokenLinks extends BaseInit {
 						}
 
 					}
+					msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
+
+					Env = storage.getProperty("Env");
+					String subject = "Selenium Automation Script: " + Env + " " + ServerName + " Broken Links";
+					String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
+
+					try {
+						SendEmail.sendMail("ravina.prajapati@samyak.com,parth.doshi@samyak.com,asharma@samyak.com",
+								subject, msg.toString(), File);
+
+					} catch (Exception ex) {
+						logs.error(ex);
+					}
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
 					msg1.append("Issue with URL==FAIL" + "\n");
@@ -314,7 +340,7 @@ public class BrokenLinks extends BaseInit {
 								.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class=\"welcomecontent\"]")));
 
 					}
-										Thread.sleep(10000);
+					Thread.sleep(10000);
 
 					links = driver.findElements(By.tagName("a"));
 
@@ -351,6 +377,19 @@ public class BrokenLinks extends BaseInit {
 
 						}
 
+					}
+					msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
+
+					Env = storage.getProperty("Env");
+					String subject = "Selenium Automation Script: " + Env + " " + ServerName + " Broken Links";
+					String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
+
+					try {
+						SendEmail.sendMail("ravina.prajapati@samyak.com,parth.doshi@samyak.com,asharma@samyak.com",
+								subject, msg.toString(), File);
+
+					} catch (Exception ex) {
+						logs.error(ex);
 					}
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
@@ -449,6 +488,19 @@ public class BrokenLinks extends BaseInit {
 						}
 
 					}
+					msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
+
+					Env = storage.getProperty("Env");
+					String subject = "Selenium Automation Script: " + Env + " " + ServerName + " Broken Links";
+					String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
+
+					try {
+						SendEmail.sendMail("ravina.prajapati@samyak.com,parth.doshi@samyak.com,asharma@samyak.com",
+								subject, msg.toString(), File);
+
+					} catch (Exception ex) {
+						logs.error(ex);
+					}
 
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
@@ -519,7 +571,32 @@ public class BrokenLinks extends BaseInit {
 						} catch (Exception e) {
 
 						}
+						msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
 
+						Env = storage.getProperty("Env");
+						String subject = "Selenium Automation Script: " + Env + " " + ServerName + " Broken Links";
+						String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
+
+						try {
+							SendEmail.sendMail("ravina.prajapati@samyak.com,parth.doshi@samyak.com,asharma@samyak.com",
+									subject, msg.toString(), File);
+
+						} catch (Exception ex) {
+							logs.error(ex);
+						}
+					}
+					msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
+
+					Env = storage.getProperty("Env");
+					String subject = "Selenium Automation Script: " + Env + " " + ServerName + " Broken Links";
+					String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
+
+					try {
+						SendEmail.sendMail("ravina.prajapati@samyak.com,parth.doshi@samyak.com,asharma@samyak.com",
+								subject, msg.toString(), File);
+
+					} catch (Exception ex) {
+						logs.error(ex);
 					}
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
@@ -598,6 +675,19 @@ public class BrokenLinks extends BaseInit {
 						}
 
 					}
+					msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
+
+					Env = storage.getProperty("Env");
+					String subject = "Selenium Automation Script: " + Env + " " + ServerName + " Broken Links";
+					String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
+
+					try {
+						SendEmail.sendMail("ravina.prajapati@samyak.com,parth.doshi@samyak.com,asharma@samyak.com",
+								subject, msg.toString(), File);
+
+					} catch (Exception ex) {
+						logs.error(ex);
+					}
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
 					msg1.append("Issue with URL==FAIL" + "\n");
@@ -618,19 +708,6 @@ public class BrokenLinks extends BaseInit {
 
 			}
 
-			msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
-
-			Env = storage.getProperty("Env");
-			String subject = "Selenium Automation Script: " + Env + " " + ServerName + " Broken Links";
-			String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
-
-			try {
-				SendEmail.sendMail("ravina.prajapati@samyak.com,parth.doshi@samyak.com,asharma@samyak.com", subject,
-						msg.toString(), File);
-
-			} catch (Exception ex) {
-				logs.error(ex);
-			}
 		}
 
 	}

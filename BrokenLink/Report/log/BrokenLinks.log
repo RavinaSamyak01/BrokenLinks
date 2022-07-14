@@ -1,9 +1,46 @@
-2022-06-29 10:56:07,966 - BrokenLinks -INFO - initialization of the properties file is done
-2022-06-29 10:56:09,674 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 103.0.5060.53 (since Google Chrome 103 is installed in your machine)
-2022-06-29 10:56:09,736 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\WINDOWS\system32\config\systemprofile\.m2\repository\webdriver\chromedriver\win32\103.0.5060.53\chromedriver.exe
-2022-06-29 10:56:13,653 - BrokenLinks -INFO - Total URL exist in sheet==10
-2022-06-29 10:56:13,653 - BrokenLinks -INFO - ===============Broken Links Test Start===============
-2022-06-29 10:56:13,723 - BrokenLinks -INFO - Server Name==FedEXSameDay
-2022-06-29 10:56:13,763 - BrokenLinks -INFO - URL is==https://www.fedexsameday.com/
-2022-06-29 10:56:13,763 - BrokenLinks -INFO - =====Broken Links Test Without Login=====
-2022-06-29 10:56:24,281 - BrokenLinks -INFO - Total links are 72
+2022-07-14 14:20:21,110 - BrokenLinks -INFO - initialization of the properties file is done
+2022-07-14 14:20:21,696 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 103.0.5060.53 (since Google Chrome 103 is installed in your machine)
+2022-07-14 14:20:21,727 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\103.0.5060.53\chromedriver.exe
+2022-07-14 14:20:25,161 - BrokenLinks -INFO - Total URL exist in sheet==10
+2022-07-14 14:20:25,161 - BrokenLinks -INFO - ===============Broken Links Test Start===============
+2022-07-14 14:20:25,268 - BrokenLinks -INFO - Server Name==Connect
+2022-07-14 14:20:25,359 - BrokenLinks -INFO - URL is==http://10.20.104.71:8072/
+2022-07-14 14:20:25,359 - BrokenLinks -INFO - =====Broken Links Test Without Login=====
+2022-07-14 14:20:31,606 - BrokenLinks -INFO - Total links are 0
+2022-07-14 14:20:31,677 - BrokenLinks -INFO - =====Broken Links Test After Login=====
+2022-07-14 14:20:34,080 - BrokenLinks -INFO - Entered UserName
+2022-07-14 14:20:35,377 - BrokenLinks -INFO - Entered Password
+2022-07-14 14:20:36,694 - BrokenLinks -INFO - Login done
+2022-07-14 14:21:05,228 - BrokenLinks -INFO - Total links are 83
+2022-07-14 14:25:21,314 - BrokenLinks -INFO - ===============Broken Links Test Start===============
+2022-07-14 14:25:21,371 - BrokenLinks -INFO - Server Name==NetAgent
+2022-07-14 14:25:21,428 - BrokenLinks -INFO - URL is==https://stagingna.nglog.com/login
+2022-07-14 14:25:21,430 - BrokenLinks -INFO - =====Broken Links Test Without Login=====
+2022-07-14 14:25:29,007 - BrokenLinks -INFO - Total links are 1
+2022-07-14 14:25:31,336 - BrokenLinks -INFO - =====Broken Links Test After Login=====
+2022-07-14 14:27:19,708 - BrokenLinks -INFO - ===============Broken Links Test Start===============
+2022-07-14 14:27:19,797 - BrokenLinks -INFO - Server Name==NetShip
+2022-07-14 14:27:19,895 - BrokenLinks -INFO - URL is==https://stagingns.nglog.com/
+2022-07-14 14:27:19,896 - BrokenLinks -INFO - =====Broken Links Test Without Login=====
+2022-07-14 14:27:28,815 - BrokenLinks -INFO - Total links are 4
+2022-07-14 14:27:33,082 - BrokenLinks -INFO - =====Broken Links Test After Login=====
+2022-07-14 14:29:04,063 - BrokenLinks -INFO - ===============Broken Links Test Start===============
+2022-07-14 14:29:04,114 - BrokenLinks -INFO - Server Name==NetAgent Support Login
+2022-07-14 14:29:04,169 - BrokenLinks -INFO - URL is==https://stagingna.nglog.com/support
+2022-07-14 14:29:04,169 - BrokenLinks -INFO - =====Broken Links Test Without Login=====
+2022-07-14 14:29:06,634 - BrokenLinks -INFO - Total links are 0
+2022-07-14 14:29:06,665 - BrokenLinks -INFO - =====Broken Links Test After Login=====
+2022-07-14 14:29:12,357 - BrokenLinks -INFO - Issue with URL==FAIL
+2022-07-14 14:29:13,746 - BrokenLinks -INFO - ===============Broken Links Test Start===============
+2022-07-14 14:29:13,772 - BrokenLinks -INFO - Server Name==NetShip Support Login
+2022-07-14 14:29:13,792 - BrokenLinks -INFO - URL is==https://stagingns.nglog.com/support
+2022-07-14 14:29:13,792 - BrokenLinks -INFO - =====Broken Links Test Without Login=====
+2022-07-14 14:29:14,638 - BrokenLinks -INFO - Total links are 3
+2022-07-14 14:29:14,705 - BrokenLinks -INFO - =====Broken Links Test After Login=====
+2022-07-14 14:30:11,326 - BrokenLinks -INFO - ===============Broken Links Test Start===============
+2022-07-14 14:30:11,369 - BrokenLinks -INFO - Server Name==FedEXSameDay
+2022-07-14 14:30:11,405 - BrokenLinks -INFO - URL is==https://staging.fedexsameday.com
+2022-07-14 14:30:11,406 - BrokenLinks -INFO - =====Broken Links Test Without Login=====
+2022-07-14 14:30:25,521 - BrokenLinks -INFO - Total links are 72
+2022-07-14 14:33:02,823 - BrokenLinks -INFO - =====Broken Links Test After Login=====
+2022-07-14 14:33:13,373 - BrokenLinks -INFO - Issue with URL==FAIL
