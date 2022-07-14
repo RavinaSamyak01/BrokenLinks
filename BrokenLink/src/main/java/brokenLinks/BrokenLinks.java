@@ -571,19 +571,7 @@ public class BrokenLinks extends BaseInit {
 						} catch (Exception e) {
 
 						}
-						msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
 
-						Env = storage.getProperty("Env");
-						String subject = "Selenium Automation Script: " + Env + " " + ServerName + " Broken Links";
-						String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
-
-						try {
-							SendEmail.sendMail("ravina.prajapati@samyak.com,parth.doshi@samyak.com,asharma@samyak.com",
-									subject, msg.toString(), File);
-
-						} catch (Exception ex) {
-							logs.error(ex);
-						}
 					}
 					msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
 
