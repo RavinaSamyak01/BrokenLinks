@@ -26,7 +26,7 @@ public class BrokenLinks extends BaseInit {
 		int totalrows = getTotalRow("URL");
 		logs.info("Total URL exist in sheet==" + totalrows);
 
-		for (int row = 1; row < totalrows; row++) {
+		for (int row = 7; row < totalrows; row++) {
 			StringBuilder msg = new StringBuilder();
 			logs.info("===============Broken Links Test Start===============");
 			msg.append("===============Broken Links Test Start===============" + "\n\n");
@@ -77,6 +77,7 @@ public class BrokenLinks extends BaseInit {
 								+ HttpURLConnection.HTTP_NOT_FOUND + "\n");
 
 					}
+
 				} catch (Exception e) {
 
 				}
@@ -84,8 +85,29 @@ public class BrokenLinks extends BaseInit {
 			}
 
 			ServerName = getData("URL", row, 0);
+
+			// --URL without login credentials
+			if (ServerName.equalsIgnoreCase("FedEx CIL/ MDSI")
+					|| ServerName.equalsIgnoreCase("Special Support - FedEx RW/ CR_46")
+					|| ServerName.equalsIgnoreCase("Test Utility (Cheetah Order Processing)")) {
+				msg.append("\n\n\n" + "Broken Link test Done for " + ServerName + "\n\n\n");
+
+				Env = storage.getProperty("Env");
+				String subject = "Selenium Automation Script: " + Env + " " + ServerName + " Broken Links";
+				String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\BrokenLinks.html";
+
+				try {
+					SendEmail.sendMail("ravina.prajapati@samyak.com,parth.doshi@samyak.com,asharma@samyak.com", subject,
+							msg.toString(), File);
+
+				} catch (Exception ex) {
+					logs.error(ex);
+				}
+
+			}
+
 			// --Login to URL and check links
-			if (ServerName.equalsIgnoreCase("Connect")) {
+			else if (ServerName.equalsIgnoreCase("Connect")) {
 				logs.info("=====Broken Links Test After Login=====");
 				msg.append("\n\n" + "=====Broken Links Test After Login=====" + "\n\n");
 
@@ -306,6 +328,21 @@ public class BrokenLinks extends BaseInit {
 					Thread.sleep(2000);
 					isElementPresent(("NASProcess_id")).click();
 
+					try {
+						try {
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("l_message")));
+						} catch (Exception waittt) {
+							WebDriverWait waitNew = new WebDriverWait(driver, 50);
+							waitNew.until(ExpectedConditions.visibilityOfElementLocated(By.id("l_message")));
+
+						}
+
+					} catch (Exception e) {
+						System.out.println("Validation Message is not Display.\n\n");
+						msg.append("Validation Message is not Display.\n\n");
+						System.out.println("============================================================\n\n");
+						msg.append("============================================================\n\n");
+					}
 					String NACourier = getData("URL", row, 4);
 					wait.until(ExpectedConditions.elementToBeClickable(By.id("supinputCourier")));
 					isElementPresent(("NASCourier_id")).clear();
@@ -317,6 +354,7 @@ public class BrokenLinks extends BaseInit {
 					Select opt = new Select(isElementPresent(("NASProfDrp_id")));
 					Thread.sleep(2000);
 					opt.selectByIndex(1);
+					Thread.sleep(2000);
 
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("img_profile")));
 					if (isElementPresent(("NASImg_id")).isEnabled() == true) {
@@ -620,9 +658,9 @@ public class BrokenLinks extends BaseInit {
 					isElementPresent(("FDXPassword_id")).clear();
 					isElementPresent(("FDXPassword_id")).sendKeys(Password);
 					Thread.sleep(2000);
+					wait.until(ExpectedConditions.elementToBeClickable(By.id("Header_fdx_main_cmdMenuLogin")));
 					isElementPresent(("FDXLogin_id")).click();
 					System.out.println("Login done");
-					driver.getTitle();
 					wait.until(ExpectedConditions
 							.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class=\"fdx-o-grid\"]")));
 					Thread.sleep(10000);
@@ -677,9 +715,20 @@ public class BrokenLinks extends BaseInit {
 						logs.error(ex);
 					}
 				} catch (Exception e) {
-					logs.info("Issue with URL==FAIL");
-					msg1.append("Issue with URL==FAIL" + "\n");
-					getScreenshot(driver, "URLIssue");
+
+					try {
+						isElementPresent(("FDXLogin_id")).click();
+						wait.until(
+								ExpectedConditions.visibilityOfElementLocated(By.id("Header_fdx_main_lblloginmmsg")));
+						String ValMsg = driver.findElement(By.id("Header_fdx_main_lblloginmmsg")).getText();
+						msg.append("Step4 : Application Login Successfully : FAIL, " + ValMsg + "\n");
+						getScreenshot(driver, "LoginIssue");
+					} catch (Exception OnLOGinBTN) {
+						msg.append("Step4 : Application Login Successfully : FAIL" + "\n");
+						msg.append("URL is==" + driver.getCurrentUrl());
+						getScreenshot(driver, "LoginIssue");
+
+					}
 
 					Env = storage.getProperty("Env");
 					String subject = "Selenium Automation Script: " + Env + ServerName + " Login";
