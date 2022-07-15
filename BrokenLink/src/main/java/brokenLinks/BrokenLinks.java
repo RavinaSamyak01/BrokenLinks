@@ -26,7 +26,7 @@ public class BrokenLinks extends BaseInit {
 		int totalrows = getTotalRow("URL");
 		logs.info("Total URL exist in sheet==" + totalrows);
 
-		for (int row = 7; row < totalrows; row++) {
+		for (int row = 1; row < totalrows; row++) {
 			StringBuilder msg = new StringBuilder();
 			logs.info("===============Broken Links Test Start===============");
 			msg.append("===============Broken Links Test Start===============" + "\n\n");
