@@ -26,7 +26,7 @@ public class BrokenLinks extends BaseInit {
 		int totalrows = getTotalRow("URL");
 		logs.info("Total URL exist in sheet==" + totalrows);
 
-		for (int row = 1; row < totalrows; row++) {
+		for (int row = 6; row < 7; row++) {
 			StringBuilder msg = new StringBuilder();
 			logs.info("===============Broken Links Test Start===============");
 			msg.append("===============Broken Links Test Start===============" + "\n\n");
@@ -195,11 +195,11 @@ public class BrokenLinks extends BaseInit {
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
 					msg1.append("Issue with URL==FAIL" + "\n");
-					getScreenshot(driver, "URLIssue");
+					getScreenshot(driver, "ConnectURLIssue");
 
 					Env = storage.getProperty("Env");
 					String subject = "Selenium Automation Script: " + Env + ServerName + " Login";
-					String File = ".//Report//Screnshots//URLIssue.png";
+					String File = ".//Report//Screnshots//ConnectURLIssue.png";
 
 					try {
 						SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
@@ -295,11 +295,11 @@ public class BrokenLinks extends BaseInit {
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
 					msg1.append("Issue with URL==FAIL" + "\n");
-					getScreenshot(driver, "URLIssue");
+					getScreenshot(driver, "NetAgentURLIssue");
 
 					Env = storage.getProperty("Env");
 					String subject = "Selenium Automation Script: " + Env + ServerName + " Login";
-					String File = ".//Report//Screnshots//URLIssue.png";
+					String File = ".//Report//Screnshots//NetAgentURLIssue.png";
 
 					try {
 						SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
@@ -432,11 +432,11 @@ public class BrokenLinks extends BaseInit {
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
 					msg1.append("Issue with URL==FAIL" + "\n");
-					getScreenshot(driver, "URLIssue");
+					getScreenshot(driver, "NetAgentSPURLIssue");
 
 					Env = storage.getProperty("Env");
 					String subject = "Selenium Automation Script: " + Env + ServerName;
-					String File = ".//Report//Screnshots//URLIssue.png";
+					String File = ".//Report//Screnshots//NetAgentSPURLIssue.png";
 
 					try {
 						SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
@@ -543,11 +543,11 @@ public class BrokenLinks extends BaseInit {
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
 					msg1.append("Issue with URL==FAIL" + "\n");
-					getScreenshot(driver, "URLIssue");
+					getScreenshot(driver, "NetShipSPURLIssue");
 
 					Env = storage.getProperty("Env");
 					String subject = "Selenium Automation Script: " + Env + ServerName;
-					String File = ".//Report//Screnshots//URLIssue.png";
+					String File = ".//Report//Screnshots//NetShipSPURLIssue.png";
 
 					try {
 						SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
@@ -627,11 +627,11 @@ public class BrokenLinks extends BaseInit {
 				} catch (Exception e) {
 					logs.info("Issue with URL==FAIL");
 					msg1.append("Issue with URL==FAIL" + "\n");
-					getScreenshot(driver, "URLIssue");
+					getScreenshot(driver, "NetShipURLIssue");
 
 					Env = storage.getProperty("Env");
 					String subject = "Selenium Automation Script: " + Env + ServerName + " Login";
-					String File = ".//Report//Screnshots//URLIssue.png";
+					String File = ".//Report//Screnshots//NetShipURLIssue.png";
 
 					try {
 						SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
@@ -661,9 +661,9 @@ public class BrokenLinks extends BaseInit {
 					wait.until(ExpectedConditions.elementToBeClickable(By.id("Header_fdx_main_cmdMenuLogin")));
 					isElementPresent(("FDXLogin_id")).click();
 					System.out.println("Login done");
+					Thread.sleep(5000);
 					wait.until(ExpectedConditions
-							.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class=\"fdx-o-grid\"]")));
-					Thread.sleep(10000);
+							.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class=\"fdx-subtitle\"]")));
 
 					links = driver.findElements(By.tagName("a"));
 
@@ -717,22 +717,21 @@ public class BrokenLinks extends BaseInit {
 				} catch (Exception e) {
 
 					try {
-						isElementPresent(("FDXLogin_id")).click();
 						wait.until(
 								ExpectedConditions.visibilityOfElementLocated(By.id("Header_fdx_main_lblloginmmsg")));
 						String ValMsg = driver.findElement(By.id("Header_fdx_main_lblloginmmsg")).getText();
 						msg.append("Step4 : Application Login Successfully : FAIL, " + ValMsg + "\n");
-						getScreenshot(driver, "LoginIssue");
+						getScreenshot(driver, "FDXLoginIssue");
 					} catch (Exception OnLOGinBTN) {
 						msg.append("Step4 : Application Login Successfully : FAIL" + "\n");
 						msg.append("URL is==" + driver.getCurrentUrl());
-						getScreenshot(driver, "LoginIssue");
+						getScreenshot(driver, "FDXLoginIssue");
 
 					}
 
 					Env = storage.getProperty("Env");
 					String subject = "Selenium Automation Script: " + Env + ServerName + " Login";
-					String File = ".//Report//Screnshots//URLIssue.png";
+					String File = ".//Report//Screnshots//FDXLoginIssue.png";
 
 					try {
 						SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);

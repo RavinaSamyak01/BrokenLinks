@@ -1,19 +1,10 @@
-2022-07-15 13:40:07,078 [main] INFO BrokenLinks - initialization of the properties file is done
-2022-07-15 13:40:08,200 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (since Google Chrome 103 is installed in your machine)
-2022-07-15 13:40:08,247 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\WINDOWS\system32\config\systemprofile\.m2\repository\webdriver\chromedriver\win32\103.0.5060.53\chromedriver.exe
-2022-07-15 13:40:14,736 [main] INFO BrokenLinks - Total URL exist in sheet==10
-2022-07-15 13:40:14,737 [main] INFO BrokenLinks - ===============Broken Links Test Start===============
-2022-07-15 13:40:14,884 [main] INFO BrokenLinks - Server Name==FedEx CIL/ MDSI
-2022-07-15 13:40:14,969 [main] INFO BrokenLinks - URL is==http://10.20.144.70:9077/TestApplicationUtility/
-2022-07-15 13:40:14,970 [main] INFO BrokenLinks - =====Broken Links Test Without Login=====
-2022-07-15 13:40:36,515 [main] INFO BrokenLinks - Total links are 7
-2022-07-15 13:40:50,563 [main] INFO BrokenLinks - ===============Broken Links Test Start===============
-2022-07-15 13:40:50,587 [main] INFO BrokenLinks - Server Name==Special Support - FedEx RW/ CR_46
-2022-07-15 13:40:50,618 [main] INFO BrokenLinks - URL is==https://www.fedexsameday.com/specialsupport.aspx
-2022-07-15 13:40:50,618 [main] INFO BrokenLinks - =====Broken Links Test Without Login=====
-2022-07-15 13:40:58,991 [main] INFO BrokenLinks - Total links are 49
-2022-07-15 13:42:30,320 [main] INFO BrokenLinks - ===============Broken Links Test Start===============
-2022-07-15 13:42:30,340 [main] INFO BrokenLinks - Server Name==Test Utility (Cheetah Order Processing)
-2022-07-15 13:42:30,360 [main] INFO BrokenLinks - URL is==http://10.20.144.70:9077/PublicServiceWebApplication/FlashWsV2.aspx
-2022-07-15 13:42:30,360 [main] INFO BrokenLinks - =====Broken Links Test Without Login=====
-2022-07-15 13:43:13,528 [main] INFO BrokenLinks - Total links are 10
+2022-07-18 10:45:25,605 [main] INFO BrokenLinks - initialization of the properties file is done
+2022-07-18 10:45:25,907 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (since Google Chrome 103 is installed in your machine)
+2022-07-18 10:45:25,930 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\103.0.5060.53\chromedriver.exe
+2022-07-18 10:45:27,716 [main] INFO BrokenLinks - Total URL exist in sheet==10
+2022-07-18 10:45:27,718 [main] INFO BrokenLinks - ===============Broken Links Test Start===============
+2022-07-18 10:45:27,803 [main] INFO BrokenLinks - Server Name==FedEXSameDay
+2022-07-18 10:45:27,873 [main] INFO BrokenLinks - URL is==https://staging.fedexsameday.com
+2022-07-18 10:45:27,874 [main] INFO BrokenLinks - =====Broken Links Test Without Login=====
+2022-07-18 10:45:40,130 [main] INFO BrokenLinks - Total links are 72
+2022-07-18 10:47:10,388 [main] INFO BrokenLinks - =====Broken Links Test After Login=====
